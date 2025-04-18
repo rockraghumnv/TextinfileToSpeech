@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Speech App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e90ff, #ff69b4);
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero {
+            animation: fadeIn 3s;
+        }
+
+        .hero img {
+            width: 100%;
+            max-width: 600px;
+            animation: slideIn 2s;
+        }
+
+        .content {
+            margin: 30px auto;
+            max-width: 800px;
+            text-align: left;
+            animation: fadeIn 2s;
+        }
+
+        .content h2 {
+            color: #ffeb3b;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 20px 0;
+            background-color: #ffeb3b;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #fdd835;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>Welcome to the text-to-speech App</h1>
+            <img src="https://via.placeholder.com/600x400" alt="AI illustration">
+        </div>
+        <div class="content">
+            <h2>About This App</h2>
+            <p>
+                Our Text-to-Speech app harnesses the power of Google's GTTS API to convert written text into natural-sounding speech. Whether you need to listen to a document while on the go, create audio books, or assist with accessibility needs, our app provides a seamless and efficient solution.
+            </p>
+            <h2>What You Can Do</h2>
+            <p>
+                Users can upload documents in various formats, including PDFs and text files. The app will process the text and generate an audio file that you can download or receive via email. It's perfect for students, professionals, and anyone who wants to make their reading experience more flexible and convenient.
+            </p>
+            <p>
+                Simply upload your file, and our app will take care of the rest, ensuring high-quality audio output that sounds just like a human voice.
+            </p>
+            <a href="{% url 'speech:index' %}" class="button">Get Started</a>
+        </div>
+    </div>
+</body>
+</html>
