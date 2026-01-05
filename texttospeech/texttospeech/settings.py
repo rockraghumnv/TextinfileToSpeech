@@ -123,15 +123,15 @@ CORS_ORIGIN_WHITELIST = [
     'https://7f45-2409-40f2-26-f0e5-8000-00.ngrok.io',
    
 ]
-CSRF_TRUSTED_ORIGINS = ["https://7f45-2409-40f2-26-f0e5-8000-00.ngrok.io"]
+CSRF_TRUSTED_ORIGINS = ["ngrok url"]
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'manviraghu357@gmail.com'
+EMAIL_HOST_USER = 'your mail'
 EMAIL_HOST_PASSWORD = ''
-DEFAULT_FROM_EMAIL = 'manviraghu357@gmail.com'
+DEFAULT_FROM_EMAIL = 'your mail'
 
 
 CELERY_BROKER_URL = 'redis://localhost:6379/0'
